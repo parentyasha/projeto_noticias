@@ -1,0 +1,12 @@
+<h1>Notícias</h1>
+{% for noticia in object_list %}
+    {% if noticia.publicado == True %}
+        <div>
+            <h2>{{ noticia.titulo }}</h2>
+            <p>{{ noticia.conteudo | linebreaksbr }}</p>
+            <p> Data da criação: {{ noticia.data_criacao | linebreaksbr }}</p>
+            <p> Data da publicação: {{ noticia.data_publicacao | linebreaksbr }}</p>
+            <br>
+        </div>
+    {% endif %}
+{% endfor %}
